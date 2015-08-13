@@ -1,0 +1,51 @@
+/*General JS*/
+//Practice creating a model in JS
+//Use ajax call and http request in JQuery context
+//Practice creating a model in JS, again  very important
+	//Closure - Alll examples from crockford
+	//Currying - Using apply and call methods
+	//JQuery promises
+Reference the JS design patters book, it has very good examples.
+	//Read the theory about how objects are used as classes in JS, inheritance etc - 
+	//Find about some commonly used design patters and study them properly, correlate with what you have used. Event bus is a good example.
+	//Protoype in JS - undertand all ways of creating objects properly, how create objects can be augmented
+
+/*Tree*/
+//All Traversals
+//DFS, applications
+//BFS, applications
+//Min heap
+//Suffix tree
+//AVL tree, Red black tree , B Tree
+//Length, height of a binary tree, mirror, duplicate
+//Time complexities
+//Min, max elements
+//Palindromes, count check, hours of clock
+
+/*Graph*/
+//DFS, applications
+//BFS, applications
+
+/*DP, backtracking*/, /*Recurssion*/
+//NQueen problem
+//Snakes and Ladders
+//Stair climbing problem
+//Fibonacci, factorial
+//Stock market problem - FIND
+//Tower of Hanoi
+//Boggle problem, word finder
+
+/*MISC.*/
+//Kadanes algorithm - max subarray
+//All combinations, permutations of given string, array
+//Given array of a size N, print all combinations of size K
+//Merge Sort, Quick sort
+//Median of medians problem
+//Bracket matching using stack
+//Word problem - all different combination, store a link somewhere
+//Array sorted row wise and column wise, print in sorted order
+//ItoS
+//StoI
+//Find the missing number from an array of numbers
+//LCM of n numbers
+

@@ -1,0 +1,35 @@
+.container{
+    margin: auto;
+    width: 100vh;
+    height: 95vh;
+}
+.size-input{
+    margin: auto;
+    width: 500px;
+    padding-bottom: 20px;
+}
+.board{
+    margin: auto;
+    border: 1px solid black;
+    width: 500px;
+    height: 500px;
+}
+.board-column{
+    display: inline-block;
+}
+.board-cell {
+    display: block;
+}
+.board-cell.even{
+    background-color: white;
+}
+
+.board-cell.odd{
+    background-color: saddlebrown;
+}
+
+.board-cell.hasQueen{
+    background-image: url("queen.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}

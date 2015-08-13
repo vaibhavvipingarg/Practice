@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>N-Queens</title>
+    <link rel="stylesheet" type="text/css" href="nQueens.css">
+</head>
+<body>
+<div class="container">
+    <form id="input" class = "size-input" name = "sizeInputForm" onsubmit="placeQueens();return false;">
+        Enter Size: <input type="text" name="size" style="font-style: italic;" placeholder="range 4 - 12" value="4">
+    </form>
+    <div id="queenBoard" class="board">
+    </div>
+</div>
+<script src="nQueen.js" type="text/javascript"></script>
+<script>
+    var board = document.getElementById('queenBoard');
+    function placeQueens() {
+        board.innerHTML = '';
+        var size = document.sizeInputForm.size.value;
+        nQueen.placeQueens(size);
+        var layout = nQueen.getPlacedQueens();
+        var i, j;
+
+        function createColumn() {
+            var column = document.createElement("div");
+            column.className = 'board-column';
+            return column;
+        }
+
+        function createSlot(row, col, value, container, size) {
+            var slot = document.createElement("div");
+            if (row % 2 == 0) {
+                if (col % 2 == 0) {
+                    slot.className = ' board-cell even';
+                } else {
+                    slot.className = ' board-cell odd';
+                }
+            } else {
+                if (col % 2 == 0) {
+                    slot.className = ' board-cell odd';
+                } else {
+                    slot.className = ' board-cell even';
+                }
+            }
+
+            if (value === 1) {
+                slot.classList.add('hasQueen');
+            }
+
+            var dim = Math.min(container.clientWidth, container.clientHeight);
+            slot.style.height = (dim/size) + 'px';
+            slot.style.width = (dim/size) + 'px';
+
+            return slot;
+        }
+
+        for (i = 0; i < layout.length; i++) {
+            var col = createColumn();
+            for (j = 0; j < layout.length; j++) {
+                col.appendChild(createSlot(i, j, layout[i][j], board, layout.length));
+            }
+            board.appendChild(col);
+        }
+    }
+</script>
+</body>
+</html>
